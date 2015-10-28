@@ -99,9 +99,9 @@ int main(){
 		}
 		Union grafo;
 		grafo.init(N);
-		for(set<pair<int, int> > :: iterator it = Bridges.begin(); it != Bridges.end(); it++){
+		for(set<pair<int, int> > :: iterator it = Bridges.begin(); it != Bridges.end(); it++)
 			grafo.join(it -> first, it -> second);
-		}
+		
 		while(Q--){
 			int a, b;
 			cin >> a >> b;

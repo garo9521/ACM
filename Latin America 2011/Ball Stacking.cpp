@@ -15,11 +15,11 @@ int N;
 
 void LOL(){
     puts("");
-		for(int i = 1; i <= N; i++){
-            for(int j = 1; j <= N; j++)
-                printf("%d ", mapa[i][j]);
-            puts("");
-		}
+	for(int i = 1; i <= N; i++){
+		for(int j = 1; j <= N; j++)
+			printf("%d ", mapa[i][j]);
+		puts("");
+	}
 }
 
 lld area(int y, int x, int y2, int x2){
