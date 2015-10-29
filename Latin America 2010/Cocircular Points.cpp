@@ -24,9 +24,10 @@ struct Point{
 
 
 Point P(double x, double y){ // O(1)
-    Point* p = new Point;
-    p->x = x, p->y = y;
-    return *p;
+   Point p;
+   p.x = x;
+   p.y = y;
+    return p;
 }
 
 
@@ -68,6 +69,7 @@ Point Intersection(Line l, Line m){ // O(1)
 
 
 Point puntos[MAXN];
+map<Point, int> cubeta;
 
 Point Circuferencia(Point A, Point B, Point C){
 	Point Pm = P((A.x + B.x) / 2.0, (A.y + B.y) / 2.0);
@@ -95,8 +97,8 @@ int main(){
 		if(N > 2){
 			for(int i = 0; i < N; i++){
 				for(int j = i + 1; j < N; j++){
-					map<Point, int> cubeta;
 					
+					cubeta.clear();
 					for(int k = 0; k < N; k++){
 						if(i == k || j == k)
 							continue;
@@ -109,7 +111,7 @@ int main(){
 				}
 			}
 		}
-		cout << ans << endl;
+		cout << ans << "\n";
 	}
 	return 0;
 }
