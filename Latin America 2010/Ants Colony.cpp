@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <vector>
 
 using namespace std;
 
@@ -6,6 +7,8 @@ using namespace std;
 #define LOGV 20
 #define lli long long int
 
+vector <int> hola;
+hola.begin();
 
 int level[MAXV]; 
 int parent[MAXV];
